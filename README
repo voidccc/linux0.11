@@ -1,0 +1,24 @@
+# voidccc 
+# http://blog.csdn.net/voidccc
+# <voidccc@gmail.com>
+# 2013-03-11
+
+Steps to run linux-0.11 on Ubuntu:
+    1 build the code
+    $ make
+
+    2 unzip hdc-0.11-new.img in tools/bochs/ folder, this file is the root file system(MINIX).
+    $ cd tools/bochs
+    $ tar zxvf hdc-0.11-new.tar.gz
+
+    3 run bochs(2.4.6)
+    $ bochs -f ./bochsrc/bochsrc-hd.bxrc 
+
+Notes: 
+    1 Based on the tigercn version(Reference: http://www.oldlinux.org/oldlinux/viewthread.php?tid=13681) I rename the original "README" file to "README.old". Thanks to tigercn !
+    2 Tested on Ubuntu 12.04.1(Bochs 2.4.6)
+
+Change Log:
+    1 Add the MINIX root file hdc-0.11-new.img
+    1 Add "display_library:sdl" at the beginning of bochsrc-hd.bxrc file
+    2 Modify the path of "ata0-master" attribute in bochsrc-hd.bxrc file
