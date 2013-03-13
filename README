@@ -8,11 +8,10 @@ Steps to run linux-0.11 on Ubuntu:
     $ make
 
     2 unzip hdc-0.11-new.img in tools/bochs/ folder, this file is the root file system(MINIX).
-    $ cd tools/bochs
-    $ tar zxvf hdc-0.11-new.tar.gz
+    $ tar zxvf tools/bochs/hdc-0.11-new.tar.gz -C ./tools/bochs/
 
     3 run bochs(2.4.6)
-    $ bochs -f ./bochsrc/bochsrc-hd.bxrc 
+    $ bochs -f ./tools/bochs/bochsrc/bochsrc-hd.bxrc 
 
 Notes: 
     1 Based on the tigercn version(Reference: http://www.oldlinux.org/oldlinux/viewthread.php?tid=13681) I rename the original "README" file to "README.old". Thanks to tigercn !
